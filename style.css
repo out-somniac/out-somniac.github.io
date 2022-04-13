@@ -1,0 +1,56 @@
+.grid-container
+{    
+    display: grid;
+    gap: 1rem;
+    width: 50%;
+    min-width: 500px;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 10px;
+ 
+    grid-template-areas: "none name"
+                         "about content"
+                         "footer footer";
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr 2fr;
+
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+    line-height: 120%;
+}
+
+#name 
+{
+    grid-area: name;
+    font-weight: 300;
+    font-size: 36px;
+
+    text-align: left;
+}
+
+#about
+{
+    grid-area: about;
+}
+
+#content
+{
+    grid-area: content;
+}
+
+#about, #content
+{
+    border-top: 1px solid lightgrey;
+    padding-top: 10px;
+
+}
+
+a:link, a:visited
+{
+    color: black;   
+    text-decoration: underline;    
+}
+a:hover
+{
+    text-decoration: none;
+}
