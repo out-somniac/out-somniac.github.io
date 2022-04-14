@@ -15,17 +15,30 @@
     grid-template-columns: 1fr 2fr;
 
     font-family: 'Source Code Pro', monospace;
+    font-size: 1rem;
     font-weight: 300;
-    line-height: 120%;
+    line-height: 1.5;
 }
 
 #name 
 {
-    grid-area: name;
-    font-weight: 300;
-    font-size: 36px;
 
-    text-align: left;
+    grid-area: name;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+h1 
+{
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+h2
+{
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 #about
@@ -41,16 +54,50 @@
 #about, #content
 {
     border-top: 1px solid lightgrey;
-    padding-top: 10px;
-
 }
 
 a:link, a:visited
 {
     color: black;   
-    text-decoration: underline;    
+    text-decoration: underline;   
 }
 a:hover
 {
     text-decoration: none;
+}
+
+
+@media (max-width: 600px)
+{
+    .grid-container
+    {
+        grid-template-areas: "name"
+                             "about"
+                             "content";
+        grid-template-rows: 50px 1fr;
+        grid-template-columns: 1fr;
+        
+        margin-top: 0px;
+        min-width: auto;
+        width: 95%;
+    }
+}
+
+@media (max-width: 350px)
+{
+    h1
+    {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+ 
+    h2 
+    {
+        font-size: 1.1rem;
+    }
+ 
+    p 
+    {
+        font-size: 1rem;
+    }
 }
